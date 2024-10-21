@@ -3,9 +3,9 @@ const router = express.Router();
 const scoresController = require('../controllers/scoresController');
 
 // Endpoint to handle score submission
-router.post('/submit', scoresController.submitScore);
+router.post('/', scoresController.submitScore);
 // routes/scoreRoutes.js
-router.get('/get', scoresController.getAllScores);
+router.get('/', scoresController.getAllScores);
 
 module.exports = router;
 

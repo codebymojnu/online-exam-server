@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Question = require('../models/Question');
 
-router.post('/add', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const {
             subject,
@@ -31,7 +31,7 @@ router.post('/add', async (req, res) => {
     }
 });
 
-router.get('/get', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         // Retrieve all questions from the database
         const questions = await Question.find();
